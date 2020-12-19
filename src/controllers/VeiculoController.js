@@ -8,14 +8,14 @@ module.exports = {
     },
     async store(request, response) {
         const motorista = "JOÃO"
-        const placa = "AAAAAAA";
+        const placa = "FFFFFFF";
         const marca = "GM";
         const modelo = "CELTA";
         const ano = 2013;
         const cor = "VERMELHO";
         const location = {
             type: 'Point',
-            coordinates: [-42.733091, -5.105468],
+            coordinates: [-42.7662, -5.0447],
         };      
 
         const veiculoExists = await Veiculo.findOne({"detalhesVeiculo.placa": placa});

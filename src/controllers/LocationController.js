@@ -1,5 +1,6 @@
 
 const Veiculo = require('../models/Veiculo');
+const { allConnections, sendMessage } = require('../websocket');
 
 module.exports = {  
     async update(request, response){
@@ -12,7 +13,10 @@ module.exports = {
         };        
         const newLocation = await Veiculo.findByIdAndUpdate(_id, { 
             location
-        }, {new: true});
+        }, {new: true});     
+
+        sendMessage('new-location', newLocation);
+
         return response.json(newLocation);
     },    
 }
