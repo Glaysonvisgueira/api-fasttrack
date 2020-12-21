@@ -10,7 +10,7 @@ const app = express();
 const server = http.Server(app);
 
 //Conectar ao cluster do MongoDB Atlas, popular com usuário e senha para acessar o banco de dados.
-mongoose.connect('mongodb+srv://glayson:glayson12345@cluster0.r7qnp.mongodb.net/fasttrack?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://user:password@cluster0.r7qnp.mongodb.net/fasttrack?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
